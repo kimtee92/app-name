@@ -1,0 +1,16 @@
+<div class="register-card">
+    <form [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+      <div class="col-md-12">
+        <label class="control-label">Text data</label>
+        <input type="text" formControlName="text" class="form-control" placeholder="text" />
+      </div>
+      <div class="col-md-12 btn-wrap division form-group">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  <ul>
+    <li *ngFor="let datas of data">
+      {{datas.text}}
+    </li>
+  </ul>
+</div>
